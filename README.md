@@ -1,6 +1,6 @@
 ## 项目简述
 本项目是一个基于bootstrap框架搭建的一个动态表格。</br>
-本项目前端采用Bootstrap+jQuery开发技术,后端采用了Express框架+MogoDB开发技术,其中MogoDB使用了Mongoose进行驱动。</br>
+本项目采用了MVC开发模式，前端采用Bootstrap+jQuery开发技术,后端采用了Express框架+MogoDB开发技术,其中MogoDB使用了Mongoose进行驱动。</br>
 </br>
 ## 启动方法
 ``` bash
