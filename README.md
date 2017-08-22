@@ -14,7 +14,7 @@ npm start
 </br>
 
 最终呈现的效果如下：</br>
-![img](https://node.0doit.cn/img/bootstrap02.png)
+![img](https://node.0doit.cn/img/bootstrap01.png)
 
 [动态gif效果图](https://node.0doit.cn/img/5855360500.gif) 
 
