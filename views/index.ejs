@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>基于bootstrap的动态表格</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="bs-example" data-example-id="contextual-table">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>日期</th>
+                <th>姓名</th>
+                <th>住址</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% tableData.forEach(function(item){%>
+              <tr class="success">
+                <td><%= formatData(item.createdate) %></td>
+                <td><%= item.username %></td>
+                <td><%= item.address %></td>
+              </tr>
+              <%})%>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+        <div class='pagination1 bs-example' data-example-id="disabled-active-pagination" current_page='<%= currPage %>' style="margin-left: 151px;">
+          <nav aria-label="...">
+            <ul class="pagination">
+              <% if(currPage==1) {%>
+                <li class='disabled'><a aria-label="Previous" ><span aria-hidden="true">第一页</span></a></li>
+              <%}else{%>
+                <li class=''><a href="/?page=1">第一页</a></li>
+              <%}%>
+              <% if(parseInt(currPage)-2 > 1) {%>
+                <li><a>...</a></li>
+              <%}%>
+              <%
+                for(var i=currPage-3; i<parseInt(currPage)+3; i++) {
+                  if((i<=0) || (i>pageCount)) continue;
+              %>
+                <li><a href="/?page=<%= i %>"><%= i %></a></li>
+              <%}%>
+    
+              <% if(parseInt(currPage)+2 < pageCount) {%>
+                <li><a>...</a></li>
+              <%}%>
+    
+              <% if(currPage==pageCount) {%>
+                <li class='disabled'><a>最后一页</a></li>
+              <%}else{%>
+                <li class=''><a href="/?page=<%= pageCount %>" aria-label="Next"><span aria-hidden="true">最后一页</span></a></li>
+              <%}%>
+            </ul>
+          </nav>
+          </div>
+          
+    <script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+          var $nav = $('.pagination1');
+          var current_page = $nav.attr('current_page');
+          if (current_page) {
+            // 在each回调函数中的this指和原来this,记得转换成$(this)
+            $nav.find('li').each(function () {
+              var $li = $(this);
+              var $a = $li.find('a');
+              if ($a.html() == current_page) {
+                $li.addClass('active');
+                // 去除超链接的a属性href或者设定href的值为javascript:;都可使超链接无效
+                $a.removeAttr('href');
+              }
+            });
+          }
+        });
+    </script>
+  </body>
+</html>
