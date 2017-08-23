@@ -7,7 +7,7 @@
 # 安装后端所有依赖
 npm install
 
-# 启动后端服务,启动后端服务后，直接访问http://localhost:3000即可。
+# 启动后端服务,服务启动成功后，直接访问http://localhost:3000即可。
 npm start
 
 ```
