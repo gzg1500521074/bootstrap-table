@@ -10,4 +10,10 @@ a {
 .wrap{
   width: 900px;
   margin: 0 auto;
+  text-align: center;
+}
+
+.wrap .table{
+  text-align: left;
+  margin-top: 20px;
 }

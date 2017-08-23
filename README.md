@@ -7,14 +7,14 @@
 # 安装后端所有依赖
 npm install
 
-# 启动后端服务
+# 启动后端服务,启动后端服务后，直接访问http://localhost:3000即可。
 npm start
 
 ```
 </br>
 
 最终呈现的效果如下：</br>
-![img](https://node.0doit.cn/img/bootstrap01.png)
+![img](https://node.0doit.cn/img/bootstrap08.png)
 
 [动态gif效果图](https://node.0doit.cn/img/5855360500.gif) 
 
