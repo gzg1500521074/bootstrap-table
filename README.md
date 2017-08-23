@@ -18,7 +18,7 @@ npm start
 [动态gif效果图](https://node.0doit.cn/img/5855360500.gif) 
 
 MongoDB中的数据如下图所示：</br>
-![img](https://node.0doit.cn/img/database.png)
+![img](https://node.0doit.cn/img/database1.png)
 
 
 
